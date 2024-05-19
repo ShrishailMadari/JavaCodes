@@ -11,7 +11,12 @@ public class ReverseString {
         String stringObject = string.nextLine();
         System.out.println("Entered String Object is: "+stringObject);
         System.out.println("reversed String: "+reverseString(stringObject));
-
+        System.out.println();
+        System.out.println("2). using array: ");
+        System.out.println("reversed String: "+reverseUsingCharArray(stringObject));
+        System.out.println();
+        System.out.println("3). using StringBuffer");
+        System.out.println("reversed String: "+usingStringBuffer(stringObject));
     }
     private static String reverseString(String string){
         String reversedObject = "";
@@ -20,4 +25,19 @@ public class ReverseString {
         }
         return reversedObject;
     }
+    private static String reverseUsingCharArray(String s){
+        String s1 = "";
+        char []s2 = s.toCharArray();
+        for (int i = s2.length-1; i>=0; i--){
+            s1 = s1+s2[i];
+        }
+    return s1;
+    }
+
+    private static String usingStringBuffer(String s){
+        StringBuffer buffer = new StringBuffer(s);
+        String string = String.valueOf(buffer.reverse());
+        return string;
+    }
+
 }
