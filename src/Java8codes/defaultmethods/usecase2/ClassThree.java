@@ -1,6 +1,6 @@
-package Java8codes;
+package Java8codes.defaultmethods.usecase2;
 
-public class ClassThree implements DefaultInterface{
+public class ClassThree implements DefaultInterface {
     @Override
     public void printNames() {
         System.out.println("class three object");

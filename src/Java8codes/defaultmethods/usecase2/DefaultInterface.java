@@ -1,4 +1,4 @@
-package Java8codes;
+package Java8codes.defaultmethods.usecase2;
 
 public interface DefaultInterface {
     //abstract methods
