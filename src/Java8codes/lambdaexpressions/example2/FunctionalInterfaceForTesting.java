@@ -22,6 +22,11 @@ public class FunctionalInterfaceForTesting implements CalciiOperations{
         CalciiOperations calci = (m,n)-> m*n;
         double x = calci.operation(2,7);
         System.out.println(x);
+        //default method
+        calciiOperations.printInfo();
+
+        //accessing the static method
+        CalciiOperations.getTheShapeOfThings();
     }
     @Override
     public double operation(double a, double b) {
