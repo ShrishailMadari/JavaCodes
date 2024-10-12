@@ -18,6 +18,10 @@ public class FunctionalInterfaceForTesting implements CalciiOperations{
         };
         double z = c.operation(10,20);
         System.out.println(z);
+
+        CalciiOperations calci = (m,n)-> m*n;
+        double x = calci.operation(2,7);
+        System.out.println(x);
     }
     @Override
     public double operation(double a, double b) {
