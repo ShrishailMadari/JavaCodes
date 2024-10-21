@@ -2,7 +2,7 @@ package LinkedList;
 
 import java.util.LinkedList;
 
-class Node{
+class Node {
     String data;
     Node nextNode;
 
@@ -11,9 +11,9 @@ class Node{
     }
 
 }
+
 public class LengthOfLinkedList {
     public static void main(String[] args) {
-        LinkedList<Object> list = new LinkedList<>();
         Node a = new Node("200");
         Node b = new Node("300");
         Node c = new Node("400");
@@ -25,15 +25,28 @@ public class LengthOfLinkedList {
         c.nextNode = d;
         d.nextNode = e;
         e.nextNode = f;
+
         int length = findLength(a);
         System.out.println(length);
+        System.out.println("***************************");
+        int l = findLengthUsingRecursion(a);
+        System.out.println(l);
+    }
+        //wrong code
+    private static int findLengthUsingRecursion(Node head) {
+        int count = 0;
+        while (head != null) {
+            System.out.println(head.data + " ");
+            count++;
+            findLengthUsingRecursion(head.nextNode);
+        }
+        return count;
     }
 
     private static int findLength(Node head) {
         int count = 0;
         Node temp = head;
         while (temp != null) {
-            System.out.println(temp.data + " ");
             temp = temp.nextNode;
             count++;
         }
