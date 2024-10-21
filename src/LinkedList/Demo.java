@@ -1,13 +1,13 @@
-package Day2.linkedlist;
+package LinkedList;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Demo {
     public static void main(String[] args) {
         System.out.println("working with Linked List");
 
-        LinkedList list = new LinkedList<>();
+        LinkedList<Object> list = new LinkedList<>();
         list.add(100);
         list.add(200);
         list.add(300);
@@ -17,8 +17,8 @@ public class Demo {
         System.out.println(list);
 
         //traversing
-        for(int i = 0; i<list.size(); i++){
-            System.out.println(list.get(i));
+        for (Object o : list) {
+            System.out.println(o);
         }
 
         System.out.println("In Reverse Order");
@@ -29,7 +29,7 @@ public class Demo {
         int [] array = {10,20,30,40,40};
         int size = array.length;
         for (int i = 0; i<= array.length; i++)
-            System.out.print(array);
+            System.out.print(Arrays.toString(array));
         System.out.println();
         System.out.println("size of the array is" + size);
 
