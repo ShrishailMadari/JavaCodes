@@ -10,6 +10,13 @@ public class DisplayingLL {
             this.data = data;
         }
     }
+    public static void display(Node head){
+        Node temp = head;
+        while (temp != null){
+            System.out.print(temp.data+" ");
+            temp = temp.nextNode;
+        }
+    }
     public static void main(String[] args) {
         Node a =new Node(9);
         Node b =new Node(19);
@@ -35,5 +42,6 @@ public class DisplayingLL {
             System.out.println(tempo.data+ " ");
             tempo = tempo.nextNode;
         }
+        display(a);
     }
 }
