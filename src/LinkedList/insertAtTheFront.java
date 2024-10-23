@@ -1,6 +1,6 @@
 package LinkedList;
 
-public class insertAtTheEnd {
+public class insertAtTheFront {
     // Function to insert a new node at the beginning of the
     // list
     public static Node insertAtFront(Node head,
@@ -9,8 +9,8 @@ public class insertAtTheEnd {
         // Create a new node with the given data
         Node new_node = new Node(new_data);
 
-        // Make the next of the new node point to the
-        // current head
+        /*Make the next of the new node point to the
+        current head*/
         new_node.nextNode = head;
         System.out.println("new node pointing to the current Node");
         // Return the new node as the new head of the list
