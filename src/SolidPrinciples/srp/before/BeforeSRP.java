@@ -1,4 +1,4 @@
-package SolidPrinciples;
+package SolidPrinciples.srp.before;
 class Invoice {
     private double amount;
 
