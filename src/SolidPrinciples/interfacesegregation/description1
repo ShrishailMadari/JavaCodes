@@ -1,0 +1,6 @@
+In this example:
+
+Worker is a "fat" interface because it includes both work() and eat() methods.
+The RobotWorker class doesn’t need the eat() method since robots don’t eat.
+Implementing an unnecessary eat() method in RobotWorker violates
+ ISP because RobotWorker is forced to depend on a method it doesn’t need.

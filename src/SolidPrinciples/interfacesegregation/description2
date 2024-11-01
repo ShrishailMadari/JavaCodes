@@ -1,0 +1,7 @@
+In this solution:
+
+We’ve split Worker into Workable and Eatable interfaces,
+each representing a specific capability.
+OfficeWorker implements both Workable and Eatable since it can work and eat.
+RobotWorker only implements Workable since it only needs the work()
+method and doesn’t have to depend on an irrelevant eat() method.
