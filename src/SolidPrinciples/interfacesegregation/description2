@@ -5,3 +5,11 @@ each representing a specific capability.
 OfficeWorker implements both Workable and Eatable since it can work and eat.
 RobotWorker only implements Workable since it only needs the work()
 method and doesn’t have to depend on an irrelevant eat() method.
+
+Benefits of This Approach
+No Unnecessary Methods: Classes only implement methods they actually need,
+ making them easier to maintain and understand.
+Better Modularity: Each interface is focused on a specific behavior,
+making it easier to extend functionality without impacting unrelated classes.
+Adherence to ISP: Each class is only dependent on interfaces relevant
+to its behavior, respecting the Interface Segregation Principle.
