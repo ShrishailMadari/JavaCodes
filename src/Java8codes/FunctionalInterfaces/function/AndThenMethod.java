@@ -1,9 +1,6 @@
-package Java8codes.FunctionalInterfaces;
-
-import Java8codes.FunctionalInterfaces.Predicate.Employee;
+package Java8codes.FunctionalInterfaces.function;
 
 import java.util.function.Function;
-import java.util.function.Predicate;
 
 public class AndThenMethod {
     public static void main(String[] args) {

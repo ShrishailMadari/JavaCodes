@@ -1,4 +1,4 @@
-package Java8codes.FunctionalInterfaces;
+package Java8codes.FunctionalInterfaces.function;
 
 import java.util.function.Function;
 
