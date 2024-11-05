@@ -10,7 +10,13 @@ class Movie{
 }
 public class Example1 {
     public static void main(String[] args) {
-        Consumer<Movie> consumer = movie -> System.out.println(movie.name+": is releasing ");
-        consumer.accept(new Movie("Sexy Woman"));
+        Consumer<Movie> consumerOne = movie -> System.out.println(movie.name+": is releasing ");
+        Consumer<Movie> consumerTwo = movie -> System.out.println(movie.name+": is flop");
+        Consumer<Movie> consumerThree = movie -> System.out.println(movie.name+": is 😂😂 ");
+        //consumer Chaining
+        Consumer<Movie> consumer = consumerOne.andThen(consumerTwo).andThen(consumerThree);
+        consumerOne.accept(new Movie("Shreee"));
+
+        consumer.accept(new Movie("hey, how are you"));
     }
 }
