@@ -1,0 +1,10 @@
+In Java’s Stream API, there are numerous methods available,
+classified into intermediate operations (transformations) and
+terminal operations (actions). Each method serves a specific
+purpose for processing collections and other data sources in
+a functional style.
+
+1. Intermediate Operations
+These methods transform a stream into another stream and are "lazy,"
+meaning they do not process until a terminal operation is called.
+
