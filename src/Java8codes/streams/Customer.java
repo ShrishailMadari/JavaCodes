@@ -10,9 +10,10 @@ public class Customer {
     private String address;
     private String city;
     private String country;
+    private int age;
 
-    // Constructor
-    public Customer(Long id, String firstName, String lastName, String email, String phone, String address, String city, String country) {
+
+    public Customer(Long id, String firstName, String lastName, String email, String phone, String address, String city, String country, int age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -21,9 +22,20 @@ public class Customer {
         this.address = address;
         this.city = city;
         this.country = country;
+        this.age = age;
     }
 
+
     // Getters and Setters
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public Long getId() {
         return id;
     }
@@ -99,6 +111,7 @@ public class Customer {
                 ", address='" + address + '\'' +
                 ", city='" + city + '\'' +
                 ", country='" + country + '\'' +
+                ", age='" + age + '\'' +
                 '}';
     }
 }
