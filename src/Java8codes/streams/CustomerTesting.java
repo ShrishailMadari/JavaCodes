@@ -53,5 +53,13 @@ public class CustomerTesting {
             }
         }
         System.out.println(customersForList);
+        System.out.println();
+
+        //printing the all city names
+        List<String> cityNames = new ArrayList<>();
+        for (Customer customer: customers){
+            cityNames.add(customer.getCity());
+        }
+        System.out.println(cityNames);
     }
 }
