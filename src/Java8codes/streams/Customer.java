@@ -11,9 +11,10 @@ public class Customer {
     private String city;
     private String country;
     private int age;
+    private double salary;
 
 
-    public Customer(Long id, String firstName, String lastName, String email, String phone, String address, String city, String country, int age) {
+    public Customer(Long id, String firstName, String lastName, String email, String phone, String address, String city, String country, int age, double salary) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -23,10 +24,20 @@ public class Customer {
         this.city = city;
         this.country = country;
         this.age = age;
+        this.salary = salary;
     }
 
 
     // Getters and Setters
+
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
     public int getAge() {
         return age;
