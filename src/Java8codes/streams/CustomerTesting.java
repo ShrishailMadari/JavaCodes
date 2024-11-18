@@ -93,7 +93,26 @@ public class CustomerTesting {
             String city = customer.getCity();
             System.out.println(city);
         }
+        System.out.println();
+        //getting first 3 customer as list using limiting
+        List<Customer> list2 = customers.stream().limit(3).toList();
+        System.out.println(list2);
+        System.out.println();
+        List<String> firstThreeNames = getFirstThreeNames(customers);
+        System.out.println(firstThreeNames);
 
 
     }
+    private static List<String> getFirstThreeNames(List<Customer> customers){
+
+        List<String > firstThree = new ArrayList<>();
+        for (int i=0; i<3 && i< customers.size(); i++){
+            firstThree.add(customers.get(i).getFirstName());
+        }
+        System.out.println(firstThree);
+        return firstThree;
+    }
+
+
 }
+
