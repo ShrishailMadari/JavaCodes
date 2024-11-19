@@ -108,6 +108,17 @@ public class CustomerTesting {
         //get all customers names in list
         List<String> allNamesOfCustomers = getAllNamesOfCustomers(customers);
         System.out.println(allNamesOfCustomers);
+        System.out.println();
+        //any match()
+        // verify any emp < 25 age
+        boolean ageLessThan25 = customers.stream()
+                .anyMatch(customer -> customer.getAge() < 25);
+        System.out.println(ageLessThan25);
+        System.out.println();
+        //all match()
+        boolean b = customers.stream().allMatch(customer -> customer.getSalary() < 3000);
+        System.out.println(b);
+
 
     }
 
