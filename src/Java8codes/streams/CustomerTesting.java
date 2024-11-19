@@ -96,22 +96,42 @@ public class CustomerTesting {
         System.out.println();
         //getting first 3 customer as list using limiting
         List<Customer> list2 = customers.stream().limit(3).toList();
-        System.out.println(list2);
+        System.out.print(list2);
         System.out.println();
         List<String> firstThreeNames = getFirstThreeNames(customers);
         System.out.println(firstThreeNames);
 
+        //skipping first three elements
+        List<String> skipFirstThreeCustomers = skipFirstThreeCustomers(customers);
+        System.out.println(skipFirstThreeCustomers);
+        System.out.println();
+        //get all customers names in list
+        List<String> allNamesOfCustomers = getAllNamesOfCustomers(customers);
+        System.out.println(allNamesOfCustomers);
 
     }
+
+    private static List<String> getAllNamesOfCustomers(List<Customer> customers) {
+        List<String> names = new ArrayList<>();
+        for (Customer customer: customers){
+           names.add(customer.getFirstName());
+        }
+        return names;
+    }
+
+    private static List<String> skipFirstThreeCustomers(List<Customer> customers) {
+        return customers.stream().skip(3).map(Customer::getFirstName).toList();
+    }
+
     private static List<String> getFirstThreeNames(List<Customer> customers){
 
         List<String > firstThree = new ArrayList<>();
         for (int i=0; i<3 && i< customers.size(); i++){
             firstThree.add(customers.get(i).getFirstName());
         }
-        System.out.println(firstThree);
         return firstThree;
     }
+
 
 
 }
