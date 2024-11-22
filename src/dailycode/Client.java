@@ -18,5 +18,7 @@ public class Client {
         //from stream find the distinct words
         List<String> list = stream.map(String::toLowerCase).distinct().toList();
         System.out.println(list);
+
+        System.out.println(Arrays.stream(str.split(" ")).map(String::toLowerCase).distinct().toList());
     }
 }
