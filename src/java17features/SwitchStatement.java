@@ -5,6 +5,17 @@ public class SwitchStatement {
         switchBefore17();
         System.out.println();
         switchAfter17();
+        System.out.println();
+        String string = switchWithReturnType(26);
+    }
+
+    private static String  switchWithReturnType(Object value) {
+        return switch (value) {
+            case Integer i -> "Integer: " + i;
+            case String s -> "String: " + s;
+            case Double d -> "Double: " + d;
+            case Boolean b -> "Boolean: " + b;
+            default -> "Unknown type: " + value.getClass().getSimpleName(); };
     }
 
     private static void switchAfter17() {
@@ -25,6 +36,8 @@ public class SwitchStatement {
 
     private static void switchBefore17() {
         int day = 6;
+        int month = 12;
+
         String dayName;
         switch (day){
             case 1:
@@ -53,6 +66,50 @@ public class SwitchStatement {
 
         }
         System.out.println(dayName);
+        System.out.println();
+        String monthName;
+        switch (month){
+            case 1:
+                monthName = "Jan";
+                break;
+            case 2:
+                monthName = "Feb";
+                break;
+            case 3:
+                monthName = "March";
+                break;
+            case 4:
+                monthName = "Apr";
+                break;
+            case 5:
+                monthName = "Jan";
+                break;
+            case 6:
+                monthName = "May";
+                break;
+            case 7:
+                monthName = "June";
+                break;
+            case 8:
+                monthName = "July";
+                break;
+            case 9:
+                monthName = "Aug";
+                break;
+            case 10:
+                monthName = "Oct";
+                break;
+            case 11:
+                monthName = "Nov";
+                break;
+            case  12:
+                monthName = "Dec";
+                break;
+            default:
+                monthName = "Invalid MonthName";
+
+        }
+        System.out.println(monthName);
 
     }
 
